@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+#nav .leftnav {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+  height: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#nav .leftnav h1 {
+  font-size: 35px;
+  color: red;
+  padding: 20px 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-right: 70px;
+}
+
+#nav .leftnav .menuBar button {
+  display: none;
+  font-size: 24px;
+  background-color: transparent;
+  border: none;
+}
+
+#nav .leftnav .links {
+  display: flex;
+  gap: 100px;
+}
+
+#nav .leftnav .links a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+#nav .leftnav .links a:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+#nav .rightnav {
+  background-color: red;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+#nav .rightnav a {
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#verticalLinks {
+  display: none;
+  padding: 12px;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  font-size: 24px;
+}
+#verticalLinks a {
+  text-decoration: none;
+  color: black;
+}
+#verticalLinks a:hover {
+  color: red;
+}
+
+#hero h1 {
+  background-color: red;
+  color: white;
+  padding: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 32px;
+}
+
+#category {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 0;
+}
+
+#category .categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 50px;
+}
+
+#category .categories h1 {
+  font-size: 40px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  width: 100%;
+  text-align: center;
+}
+
+#category .categories h1:hover {
+  background-color: red;
+  color: white;
+}
+
+#category .categories .characters {
+  display: flex;
+  flex-direction: column;
+}
+
+#category .categories .characters:hover {
+  width: 110%;
+  transition: 1s;
+}
+
+#category .categories .characters h1 {
+  text-align: center;
+  font-size: 32px;
+  background-color: lightgray;
+  width: 100%;
+}
+
+#foot {
+  background-color: lightgray;
+  padding: 20px;
+}
+
+#foot .social {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 10px;
+}
+
+#foot .social img {
+  height: 35px;
+}
+
+#foot h1 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+/* media query */
+@media screen and (max-width: 800px) {
+  #nav .leftnav .links {
+    display: none;
+  }
+
+  #nav .leftnav .menuBar button {
+    display: block;
+  }
+}

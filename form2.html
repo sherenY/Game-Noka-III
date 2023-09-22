@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="styleform2.css">
+	<title>Login to Your Account</title>
+</head>
+<script>
+	function select(){
+		var d=document.getElementById("select");
+		var displaytext=d.options[d.selectedIndex].text;
+		document.getElementById("txtvalue").value-displaytext;
+	}
+	var date = new Date();
+	var year = date.getFullYear();
+	var month = date.getMonth()+1;
+	var todayDate = String(date.getDate()).padStart(2, '0');
+	var datePattern = year + '-' + month + '-' + todayDate;
+	document.getElementById("datepick").value = datePattern;
+	document.write(datePattern);
+</script>
+<body>
+    <nav id="nav">
+        <div class="leftnav">
+            <h1>NOKA III</h1>
+            <a href="Home.html">Home</a>
+            <a href="news.html">News</a>
+            <a href="Heros.html">Heroes</a>
+            <a href="Esport.html">E-sports</a>
+        </div>
+        <div class="rightnav">
+           <u><a href="" class="regislogin">Logging-in</a></u>
+        </div>
+    </nav>
+
+    <div class="titlebig">
+        <div class="box">
+            <h2>Already have an account?</h2>
+        </div>
+    </div>
+<div class="container2">
+	<div class="container">
+		<form action="#" class="login active">
+			<h2 class="title">LOGIN</h2>
+			<div class="form-group">
+				<label for="email">Email :</label>
+				<div class="input-group">
+					<input type="email" id="email" placeholder="Email address">
+					<i class='bx bx-envelope'></i>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="password">Password :</label>
+				<div class="input-group">
+					<input type="password" pattern=".{8,}" id="password" placeholder="Your password">
+					<i class='bx bx-lock-alt' ></i>
+				</div>
+				<span class="help-text">At least 8 characters</span>
+			</div>
+			<button type="submit" class="btn-submit">SIGN IN</button>
+			<div class="haha">
+			<p>I don't have an account. <a href="#" onclick="switchForm('register', event)">SIGN UP</a></p>
+			</div>
+		</form>
+
+		<form action="#" class="register">
+			<h2 class="title">REGISTRATION</h2>
+			<div class="form-group">
+			<label for="data">Full Name :</label>
+            <div class="input-group">
+                        <input type="text" placeholder="Your full name" required>
+                </div>
+				</div>
+				<div class="form-group">
+				<label for="data">Phone Number :</label>
+				<div class="input-group">
+                        <input type="number" placeholder="Your phone number" required>
+                </div>
+				</div>
+				<div class="profile-pic-div">
+					<img src="profile.jpg" id="photo">
+					<input type="file" id="file">
+					<label for="file" id="uploadBtn">Choose Photo</label>
+				  </div>
+			<div class="loginas">
+				<span class="login-as">Gender :</span>
+				<input type="radio" name="people" id="dot-1">
+				<label name="hoho">Male</label>  
+				<input type="radio" name="people" id="dot-2">
+				<label name="hoho">Female</label> 
+				<input type="radio" name="people" id="dot-3">
+				<label name="hoho">Prefer not to say</label> 
+			</div>
+			<div class="selectcountry">
+				<span class="country"> Select Country : </span>
+				<select id="select" onchange="select();">
+					<option>Indonesia</option>
+					<option>China</option>
+					<option>France</option>
+					<option>Australia</option>
+					<option>Singapore</option>
+				</select>
+			</div>
+			<div class="dob">
+				<span class="birth">Date of Birth : </span>
+				<input type="date" id="datepick">
+			</div>
+			<div class="form-group">
+				<label for="email">Email</label>
+				<div class="input-group">
+					<input type="email" id="email" placeholder="Email address">
+					<i class='bx bx-envelope'></i>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label>
+				<div class="input-group">
+					<input type="password" pattern=".{8,}" id="password" placeholder="Your password">
+					<i class='bx bx-lock-alt' ></i>
+				</div>
+				<span class="help-text">At least 8 characters</span>
+			</div>
+			<div class="form-group">
+				<label for="confirm-pass">Confirm password</label>
+				<div class="input-group">
+					<input type="password" id="confirm-pass" placeholder="Enter password again">
+					<i class='bx bx-lock-alt' ></i>
+				</div>
+				<span class="help-text">Confirm password must be same with password</span>
+			</div>
+
+			<div class="check">
+				<div class="boxcheck">
+					<input type="checkbox" id="checking">
+					<label for="checking" class="text">I have read and agreed to the terms and conditions</label>
+				</div>
+			</div>
+			<button type="submit" class="btn-submit">SIGN UP</button>
+			<div class="haha">
+			<p>I already have an account. <a href="#" onclick="switchForm('login', event)">SIGN IN</a></p>
+			</div>
+		</form>
+	</div>
+</div>
+
+	<script src="script2.js"></script>
+</body>
+
+<footer id="foot">
+    <div class="social">
+        <img src="Asset/image 5.png" alt="">
+        <img src="Asset/image 6.png" alt="">
+        <img src="Asset/image 8.png" alt="">
+    </div>
+    <h1>
+        Copyright @2022 NOKA III
+    </h1>
+</footer>
+
+</html>
